@@ -1,0 +1,39 @@
+/* Empty. Add your own CSS if you like */
+.dark {
+  background-color: #3f4041 !important;
+  color: #ffffff;
+}
+.dark .scroll-content {
+  background-color: #3f4041 !important;
+}
+.dark .item {
+  background-color: #3f4041;
+  border: none;
+  border-top: 1px solid #464646;
+  border-bottom: 2px solid #333333;
+  padding: 20px;
+  max-height: none;
+}
+.dark .item:first-child {
+  border-top: 1px solid black;
+}
+.dark .item:last-child {
+  border-bottom: 1px solid #333333;
+}
+.dark .item.current {
+  background-color: #262727 !important;
+  border-top: 1px solid #464646 !important;
+  border-bottom: 2px solid #333333 !important;
+}
+.dark .item.current p, .dark .item.current h3 {
+  opacity: .7;
+}
+.dark h2,
+.dark h3,
+.dark p {
+  color: #F0F1F1;
+}
+
+.dark-head {
+  text-decoration: none;
+}
