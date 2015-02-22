@@ -1,0 +1,17 @@
+<ion-view view-title="Eaze-HR">
+  <ion-content>
+    <ion-list>
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}" class="item-icon-right">
+        {{playlist.title}}
+        &nbsp;
+        <div ng-if="playlist.type != 'form'">
+            <i class="icon ion-checkmark-circled" ng-click="Accept(item)"></i>
+        </div>
+        <div ng-if="playlist.type == 'form'">
+            <i class="icon ion-plus-circled " ng-click="showForm()"></i>
+        </div>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,50 @@
+<ion-view>
+    <ion-header-bar>
+        <h1 class="title">Login</h1>
+        <div class="buttons">
+            <button class="button button-clear" ng-click="closeForm()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="doSubmit()">
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    Employee
+                </div>
+                <select>
+                    <option>Employee1</option>
+                    <option selected>Employee-Default</option>
+                    <option>EMployee2</option>
+                </select>
+
+            </div>
+            <div class="item item-input item-select">
+                <div class="input-label">
+                    Leave Type
+                </div>
+                <select>
+                    <option>Casual</option>
+                    <option selected>Sick Leave</option>
+                    <option>Medical</option>
+                </select>
+
+            </div>
+                <ion-list data-tap-disabled="true">
+                    <span class="input-label">From</span><input type="text" pick-a-date="date"
+                                      pick-a-date-options="{ format: 'yyyy-mm-dd' }" placeholder="Select Date" ng-model="formData.fromDate"  />
+                    <br>
+                    <span class="input-label">To</span><input type="text" pick-a-date="date"
+                                    pick-a-date-options="{ format: 'yyyy-mm-dd' }" placeholder="Select Date" ng-model="formData.toDate"/>
+
+                </ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Available Leaves</span>
+                    <input type="text" disabled ng-model="formData.input1">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Submit</button>
+                </label>
+
+        </form>
+    </ion-content>
+</ion-view>

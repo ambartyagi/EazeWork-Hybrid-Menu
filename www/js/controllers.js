@@ -1,5 +1,4 @@
 angular.module('starter.controllers', [])
-
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   // Form data for the login modal
   $scope.loginData = {};
@@ -36,15 +35,38 @@ angular.module('starter.controllers', [])
   $scope.date2 = new Date();
 })
 
-.controller('PlaylistsCtrl', function($scope) {
+.controller('PlaylistsCtrl', function($scope, $ionicModal) {
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Approve Leave For xxx', id: 1, type: 'leave' },
+    { title: 'Approve Expense', id: 2, type: 'exp'},
+    { title: 'Create Form xxx', id: 3, type: 'form' },
+    { title: 'Create Form xxx', id: 4, type: 'form' },
+    { title: 'Create Form xxx', id: 5, type: 'form' },
+    { title: 'Create Form xxx', id: 6, type: 'form' }
   ];
+
+  $scope.formData = {};
+
+    $ionicModal.fromTemplateUrl('templates/leaveForm.html', {
+        scope: $scope
+      }).then(function(modal) {
+        $scope.modal = modal;
+      });
+
+      // Triggered in the login modal to close it
+      $scope.closeForm = function() {
+        $scope.modal.hide();
+      };
+
+      // Open the login modal
+      $scope.showForm = function() {
+        $scope.modal.show();
+      };
+
+      // Perform the login action when the user submits the login form
+      $scope.doSubmit = function() {
+        console.log('Doing submit', $scope.formData);
+      };
 })
 .controller('SignInCtrl', function($scope, $state,$http) {
 
@@ -64,8 +86,12 @@ angular.module('starter.controllers', [])
     }).error(function(data,status,headers,config){
                    console.log('Error Returned', data);
                  });*/
-                $state.go('app.addNew');
+                $state.go('app.activity');
     }
     })
+.controller('ApplyLeaveCtrl', function($scope, $stateParams) {
+
+})
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+
 });

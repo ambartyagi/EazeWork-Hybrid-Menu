@@ -63,15 +63,25 @@ angular.module('starter', ['angular-datepicker','ionic', 'starter.controllers','
       }
     }
   })
-    .state('app.addNew', {
-      url: "/addNew",
+    .state('app.activity', {
+      url: "/Activity",
       views: {
         'menuContent': {
-          templateUrl: "templates/addNew.html",
+          templateUrl: "templates/activity.html",
           controller: 'PlaylistsCtrl'
         }
       }
     })
+
+    .state('app.applyleave', {
+          url: "/selfservice/applyleave",
+          views: {
+            'menuContent': {
+              templateUrl: "templates/leaveForm.html",
+              controller: 'ApplyLeaveCtrl'
+            }
+          }
+        })
 
   .state('app.single', {
     url: "/playlists/:playlistId",

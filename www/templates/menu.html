@@ -26,14 +26,37 @@
         <ion-item nav-clear menu-close ng-click="login()">
           Login
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/search">
-          Search
+        <ion-item nav-clear menu-close href="#/app/payroll">
+          Payroll
         </ion-item>
         <ion-item nav-clear menu-close href="#/app/selfservice">
-          Browse
+          Self Service
         </ion-item>
-        <ion-item nav-clear menu-close href="#/app/playlists">
-          Playlists
+        <ion-item nav-clear menu-close href="#/app/Activity">
+          Activity
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+
+  <ion-side-menu side="right">
+    <ion-header-bar class="bar bar-header bar-dark">
+      <h1 class="title">EazeWork</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item nav-clear menu-close ng-click="login()">
+          LogOut
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/payroll">
+          <span class="badge badge-dark">3</span>
+          Notifications
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/selfservice">
+          Settings
+        </ion-item>
+        <ion-item nav-clear menu-close href="#/app/Activity">
+          Help
         </ion-item>
       </ion-list>
     </ion-content>
